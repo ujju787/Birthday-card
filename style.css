@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1500px;
+}
+
+/* 3D Effect Container */
+.container {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  animation: fadeIn 2s ease;
+  transform-style: preserve-3d;
+  transform: rotateX(0) rotateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.container:hover {
+  transform: rotateY(10deg) rotateX(10deg);
+}
+
+/* Heading Styling */
+h1 {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: bounce 2s infinite;
+}
+
+/* Button Styling */
+button {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 30px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 2s ease;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff8a65;
+}
+
+/* Message Styling */
+#wish-message {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 600;
+  animation: fadeIn 3s ease;
+}
+
+/* Balloons Styling */
+.balloon {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  opacity: 0.8;
+  display: none; /* Hide initially */
+  animation: float 5s ease-in-out infinite;
+  filter: blur(0.5px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flowers Styling */
+.blush-flower {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #ffafbd, #ff6f61);
+  border-radius: 50%;
+  display: none; /* Hide initially */
+  animation: flowerFloat 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Balloon Float Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-200px) rotate(10deg);
+  }
+}
+
+/* Flower Float Animation */
+@keyframes flowerFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-150px) rotate(15deg);
+  }
+}
+
+/* hide element */
+#birthdayMusic {
+  display: none;
+}
+/* for footer */
+#footer {
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 2rem 0rem 1rem 0rem;
+  position: absolute;
+  bottom: 0;
+  font-family: "baloo 2";
+}

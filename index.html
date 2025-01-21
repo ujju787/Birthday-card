@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Dynamically add name in the birthday message -->
+        <h1 id="birthday-name">
+          🎉 Happy Birthday, [Sunny Aryan]!
+          <p style="color: red">&heartsuit;</p>
+          🎉
+        </h1>
+        <h2 id="para" style="color: red">Let's make this day unforgettable!</h2>
+      </header>
+
+      <section class="interactive">
+        <!-- Button to trigger music and change message -->
+        <button onclick="startCelebration()">
+          Click to Start Birthday Celebration!
+        </button>
+        <p id="wish-message">
+          Hope this year brings you as much joy as you bring to others!
+        </p>
+      </section>
+    </div>
+
+    <!-- Floating Balloons (Initially hidden) -->
+    <div
+      class="balloon"
+      style="background-color: #ff6f61; left: 10%; animation-duration: 5s"
+    ></div>
+    <div
+      class="balloon"
+      style="background-color: #ff8a65; left: 30%; animation-duration: 6s"
+    ></div>
+    <div
+      class="balloon"
+      style="background-color: #ffc3a0; left: 50%; animation-duration: 7s"
+    ></div>
+    <div
+      class="balloon"
+      style="background-color: #ffafbd; left: 70%; animation-duration: 5.5s"
+    ></div>
+    <div
+      class="balloon"
+      style="background-color: #ff9f80; left: 90%; animation-duration: 6.5s"
+    ></div>
+
+    <!-- Blush Flowers (Added to the page but initially hidden) -->
+    <div class="blush-flower" style="top: 10%; left: 20%"></div>
+    <div class="blush-flower" style="top: 30%; left: 40%"></div>
+    <div class="blush-flower" style="top: 50%; left: 60%"></div>
+    <div class="blush-flower" style="top: 70%; left: 80%"></div>
+
+    <!-- Audio for Birthday Music -->
+    <audio
+      controlsloop
+      id="birthdayMusic"
+      src="music/birthday_musix.mp3"
+      preload="auto"
+    ></audio>
+
+    <!-- footer -->
+    <footer id="footer">
+      &copy 2024 Ujjwal kumar Mishra .All Rights Reserved
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
